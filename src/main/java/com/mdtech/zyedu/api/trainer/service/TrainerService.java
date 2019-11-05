@@ -7,8 +7,6 @@ import com.mdtech.zyedu.common.cache.CacheOptions;
 import com.mdtech.zyedu.common.cache.KvCacheFactory;
 import com.mdtech.zyedu.common.cache.KvCacheWrap;
 import com.mdtech.zyedu.common.entity.Constants;
-import com.mdtech.zyedu.common.entity.ErrorCode;
-import com.mdtech.zyedu.common.exception.DetailedException;
 import com.mdtech.zyedu.common.exception.RepositoryException;
 import com.mdtech.zyedu.common.exception.ServiceException;
 import com.mdtech.zyedu.common.util.StringUtils;
@@ -54,18 +52,10 @@ public class TrainerService implements ITrainerService {
 
     @Override
     public void save_trainer(Trainer trainer) throws ServiceException {
-        Trainer oa = getByName(trainer.getName());
-
         if (trainer.getId() != null && trainer.getId() > 0) {
-            if (oa == null)
-                throw new ServiceException(ErrorCode.NOUSER.getCode());
-
             trainerRepository.save(trainer);
             trainerCache.remove(trainer.getId());
         } else {
-            if (oa != null) {
-                throw new DetailedException("用户名已存在");
-            }
             trainer.setCreatedAt(System.currentTimeMillis());
             trainerRepository.save(trainer);
         }
