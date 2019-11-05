@@ -35,12 +35,7 @@ public class FormController extends BaseController {
         return feedback(formService.findAllForm(parseModel(formQo, new FormQo())));
     }
 
-    @RequestMapping(value = "/saveForm")
-    @RequiredPermission(adminType = AdminType.NONE)
-    public ModelAndView saveForm(String form) throws Exception {
-        formService.saveForm(parseModel(form, new Form()));
-        return feedback(null);
-    }
+
 
     @RequestMapping(value = "/export_form")
     @RequiredPermission(adminType = AdminType.ADMIN, adminPermission = AdminPermission.FORM_QUERY)
