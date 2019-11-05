@@ -60,11 +60,7 @@ public class TrainerService implements ITrainerService {
             if (oa == null)
                 throw new ServiceException(ErrorCode.NOUSER.getCode());
 
-            oa.setName(trainer.getName());
-            oa.setIntro(trainer.getIntro());
-            oa.setImg(trainer.getImg());
-
-            trainerRepository.save(oa);
+            trainerRepository.save(trainer);
             trainerCache.remove(trainer.getId());
         } else {
             if (oa != null) {
