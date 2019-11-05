@@ -22,4 +22,6 @@ public interface IArticleService {
 
     void updateStatus(Byte status, Integer id);
 
+    List<Article> three_article(Integer id);
+
 }

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -79,5 +80,29 @@ public class ArticleService implements IArticleService {
         Article article = articleRepository.getOne(id);
         article.setStatus(status);
         articleRepository.save(article);
+    }
+
+    @Override
+    public List<Article> three_article(Integer id) {
+        Article article = articleRepository.getOne(id);
+        Byte type = article.getType();
+        List<Article> articleList = articleRepository.findAllByTypeOrderByIdDesc(type);
+        List<Article> result = new ArrayList<>();
+        int index1 = articleList.indexOf(id);
+        int i = 0;
+        for (Article a : articleList) {
+            if (i == index1 - 1) {
+                result.add(a);
+            }
+            if (i == index1) {
+                result.add(a);
+            }
+            if (i == index1 + 1) {
+                result.add(a);
+            }
+            i++;
+        }
+
+        return result;
     }
 }

@@ -48,8 +48,14 @@ public class AdmArticleController extends BaseController {
     @RequestMapping(value = "/updateStatus")
     @RequiredPermission(adminType = AdminType.ADMIN, adminPermission = AdminPermission.CAMPUS_EDIT)
     public ModelAndView updateStatus(Byte status, Integer id) throws Exception {
-        articleService.updateStatus(status,id);
+        articleService.updateStatus(status, id);
         return feedback(null);
+    }
+
+    @RequestMapping(value = "/three_article")
+    @RequiredPermission(adminType = AdminType.NONE)
+    public ModelAndView three_article(Integer id) throws Exception {
+        return feedback(articleService.three_article(id));
     }
 
 }
