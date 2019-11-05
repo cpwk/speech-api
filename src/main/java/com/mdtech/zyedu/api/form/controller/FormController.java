@@ -28,7 +28,6 @@ public class FormController extends BaseController {
     @Autowired
     private IHeavyWorkService heavyWorkService;
 
-
     @RequestMapping(value = "/findAllForm")
     @RequiredPermission(adminType = AdminType.ADMIN, adminPermission = AdminPermission.FORM_QUERY)
     public ModelAndView findAllForm(String formQo) throws Exception {

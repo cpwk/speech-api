@@ -58,6 +58,15 @@ public class VideoServiceImpl implements VideoService {
         if (video.getType() == null) {
             throw new DetailedException("请选择类型");
         }
+        if (video.getType().equals(3)) {
+            if (StringUtils.isEmpty(video.getVideoSummary())) {
+                throw new DetailedException("请填写视频摘要");
+            }
+
+            if (StringUtils.isEmpty(video.getVideoIntro())) {
+                throw new DetailedException("请填写视频简介");
+            }
+        }
         Video ov = videoRepository.findByTitle(video.getTitle());
         if (video.getId() != null && video.getId() > 0) {
             if (ov == null)

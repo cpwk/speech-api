@@ -26,6 +26,12 @@ public class Video {
     @Column(name = "url")
     private String url;
 
+    @Column(name = "video_summary")
+    private String videoSummary;
+
+    @Column(name = "video_intro")
+    private String videoIntro;
+
     @Column(name = "status")
     private Byte status;
 
@@ -37,7 +43,6 @@ public class Video {
 
     @Column(name = "created_at")
     private Long createdAt;
-
 
 
     public Video() {
@@ -106,5 +111,21 @@ public class Video {
 
     public void setCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getVideoSummary() {
+        return videoSummary;
+    }
+
+    public void setVideoSummary(String videoSummary) {
+        this.videoSummary = videoSummary;
+    }
+
+    public String getVideoIntro() {
+        return videoIntro;
+    }
+
+    public void setVideoIntro(String videoIntro) {
+        this.videoIntro = videoIntro;
     }
 }

@@ -2,6 +2,7 @@ package com.mdtech.zyedu.api.ws.controller;
 
 import com.mdtech.zyedu.api.article.qo.ArticleQo;
 import com.mdtech.zyedu.api.article.service.ArticleService;
+import com.mdtech.zyedu.api.article.service.IArticleService;
 import com.mdtech.zyedu.api.banners.qo.BannerQo;
 import com.mdtech.zyedu.api.banners.service.BannerService;
 import com.mdtech.zyedu.api.campus.qo.CampusQo;
@@ -26,7 +27,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController extends BaseController {
 
     @Autowired
-    private ArticleService articleService;
+    private IArticleService articleService;
 
     @Autowired
     private BannerService bannerService;
@@ -81,5 +82,12 @@ public class HomeController extends BaseController {
         formService.saveForm(parseModel(form, new Form()));
         return feedback(null);
     }
+
+    @RequestMapping(value = "/article")
+    @RequiredPermission(adminType = AdminType.NONE)
+    public ModelAndView article(Integer id) throws Exception {
+        return feedback(articleService.article(id));
+    }
+
 
 }
