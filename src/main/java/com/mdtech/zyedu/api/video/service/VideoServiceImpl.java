@@ -3,7 +3,6 @@ package com.mdtech.zyedu.api.video.service;
 import com.mdtech.zyedu.api.video.model.Video;
 import com.mdtech.zyedu.api.video.qo.VideoQo;
 import com.mdtech.zyedu.api.video.repository.VideoRepository;
-import com.mdtech.zyedu.common.entity.ErrorCode;
 import com.mdtech.zyedu.common.exception.DetailedException;
 import com.mdtech.zyedu.common.exception.ServiceException;
 import com.mdtech.zyedu.common.util.StringUtils;
@@ -69,8 +68,6 @@ public class VideoServiceImpl implements VideoService {
         }
         Video ov = videoRepository.findByTitle(video.getTitle());
         if (video.getId() != null && video.getId() > 0) {
-            if (ov == null)
-                throw new ServiceException(ErrorCode.NOUSER.getCode());
             videoRepository.save(video);
         } else {
             if (ov != null) {
