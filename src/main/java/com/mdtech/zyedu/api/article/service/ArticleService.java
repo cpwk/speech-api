@@ -86,23 +86,12 @@ public class ArticleService implements IArticleService {
     public List<Article> three_article(Integer id) {
         Article article = articleRepository.getOne(id);
         Byte type = article.getType();
-        List<Article> articleList = articleRepository.findAllByTypeOrderByIdDesc(type);
         List<Article> result = new ArrayList<>();
-        int index1 = articleList.indexOf(id);
-        int i = 0;
-        for (Article a : articleList) {
-            if (i == index1 - 1) {
-                result.add(a);
-            }
-            if (i == index1) {
-                result.add(a);
-            }
-            if (i == index1 + 1) {
-                result.add(a);
-            }
-            i++;
-        }
-
+        Article article1 = articleRepository.findByTypeAndIdBefore(type, id);
+        result.add(article1);
+        result.add(article);
+        Article article2 = articleRepository.findByTypeAndIdAfter(type, id);
+        result.add(article2);
         return result;
     }
 }
