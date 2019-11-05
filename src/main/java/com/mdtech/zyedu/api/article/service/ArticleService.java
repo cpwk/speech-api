@@ -11,8 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ArticleService implements IArticleService {
@@ -83,15 +84,15 @@ public class ArticleService implements IArticleService {
     }
 
     @Override
-    public List<Article> three_article(Integer id) {
+    public Map<String, Article> three_article(Integer id) {
+        Map<String, Article> result = new HashMap<>();
         Article article = articleRepository.getOne(id);
+        result.put("article", article);
         Byte type = article.getType();
-        List<Article> result = new ArrayList<>();
-        Article article1 = articleRepository.findByTypeAndIdBefore(type, id);
-        result.add(article1);
-        result.add(article);
-        Article article2 = articleRepository.findByTypeAndIdAfter(type, id);
-        result.add(article2);
+        Article pre = articleRepository.findFirstByTypeAndIdBeforeOrderByIdDesc(type, id);
+        Article next = articleRepository.findFirstByTypeAndIdAfterOrderByIdAsc(type, id);
+        result.put("pre", pre);
+        result.put("next", next);
         return result;
     }
 }

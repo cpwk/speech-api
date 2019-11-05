@@ -6,6 +6,7 @@ import com.mdtech.zyedu.common.exception.ServiceException;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
+import java.util.Map;
 
 public interface IArticleService {
 
@@ -22,6 +23,6 @@ public interface IArticleService {
 
     void updateStatus(Byte status, Integer id);
 
-    List<Article> three_article(Integer id);
+    Map<String,Article> three_article(Integer id);
 
 }
