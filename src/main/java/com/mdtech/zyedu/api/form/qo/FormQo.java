@@ -1,6 +1,8 @@
 package com.mdtech.zyedu.api.form.qo;
 
 import com.mdtech.zyedu.common.reposiotry.support.DataQueryObjectPage;
+import com.mdtech.zyedu.common.reposiotry.support.QueryField;
+import com.mdtech.zyedu.common.reposiotry.support.QueryType;
 
 /**
  * * * * * * * * * * * * * * * * * * * * * * * *
@@ -11,9 +13,17 @@ import com.mdtech.zyedu.common.reposiotry.support.DataQueryObjectPage;
  **/
 public class FormQo extends DataQueryObjectPage {
 
+    @QueryField(type = QueryType.EQUAL, name = "type")
+    private Byte type;
 
     public FormQo() {
     }
 
+    public Byte getType() {
+        return type;
+    }
 
+    public void setType(Byte type) {
+        this.type = type;
+    }
 }

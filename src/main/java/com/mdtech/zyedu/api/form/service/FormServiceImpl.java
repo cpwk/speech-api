@@ -11,7 +11,6 @@ import com.mdtech.zyedu.common.service.TaskService;
 import com.mdtech.zyedu.common.task.ApiTask;
 import com.mdtech.zyedu.common.util.L;
 import com.sunnysuperman.commons.util.FileUtil;
-import net.bytebuddy.asm.Advice;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
@@ -95,7 +94,9 @@ public class FormServiceImpl implements FormService {
 
                 titleRow.createCell(++cellIndex).setCellValue("姓名");
                 titleRow.createCell(++cellIndex).setCellValue("手机号");
-                titleRow.createCell(++cellIndex).setCellValue("课程");
+                if (qo.getType() == 1) {
+                    titleRow.createCell(++cellIndex).setCellValue("课程");
+                }
                 titleRow.createCell(++cellIndex).setCellValue("提交时间");
 
             }
@@ -115,7 +116,9 @@ public class FormServiceImpl implements FormService {
 
                     row.createCell(++cellIndex).setCellValue(form.getName());
                     row.createCell(++cellIndex).setCellValue(form.getMobile());
-                    row.createCell(++cellIndex).setCellValue(form.getCourse());
+                    if (qo.getType() == 1) {
+                        row.createCell(++cellIndex).setCellValue(form.getCourse());
+                    }
 
                     String date = null;
                     try {

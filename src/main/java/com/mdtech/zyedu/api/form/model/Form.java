@@ -29,6 +29,9 @@ public class Form {
     @Column(name = "created_at")
     private Long createdAt;
 
+    @Column(name = "type")
+    private Byte type;
+
 
     public Form() {
     }
@@ -71,5 +74,13 @@ public class Form {
 
     public void setCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Byte getType() {
+        return type;
+    }
+
+    public void setType(Byte type) {
+        this.type = type;
     }
 }

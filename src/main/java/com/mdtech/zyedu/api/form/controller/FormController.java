@@ -34,8 +34,6 @@ public class FormController extends BaseController {
         return feedback(formService.findAllForm(parseModel(formQo, new FormQo())));
     }
 
-
-
     @RequestMapping(value = "/export_form")
     @RequiredPermission(adminType = AdminType.ADMIN, adminPermission = AdminPermission.FORM_QUERY)
     public ModelAndView export_qaPapers(String formQo) throws Exception {
