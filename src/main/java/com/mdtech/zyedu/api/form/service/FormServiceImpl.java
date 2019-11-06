@@ -7,9 +7,12 @@ import com.mdtech.zyedu.api.form.qo.FormQo;
 import com.mdtech.zyedu.api.form.repository.FormRepository;
 import com.mdtech.zyedu.api.heavywork.model.HeavyWork;
 import com.mdtech.zyedu.api.heavywork.service.IHeavyWorkService;
+import com.mdtech.zyedu.common.exception.DetailedException;
+import com.mdtech.zyedu.common.exception.ServiceException;
 import com.mdtech.zyedu.common.service.TaskService;
 import com.mdtech.zyedu.common.task.ApiTask;
 import com.mdtech.zyedu.common.util.L;
+import com.mdtech.zyedu.common.util.StringUtils;
 import com.sunnysuperman.commons.util.FileUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -54,7 +57,10 @@ public class FormServiceImpl implements FormService {
 
 
     @Override
-    public void saveForm(Form form) {
+    public void saveForm(Form form) throws ServiceException {
+        if (!StringUtils.isChinaMobile(form.getMobile())) {
+            throw new DetailedException("请填写正确手机号");
+        }
         form.setCreatedAt(System.currentTimeMillis());
         formRepository.save(form);
     }
