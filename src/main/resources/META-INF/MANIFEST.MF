@@ -1,43 +1,43 @@
 Manifest-Version: 1.0
-Class-Path: commons-collections-3.2.1.jar spring-data-commons-2.0.11.R
- ELEASE.jar spring-aop-5.0.10.RELEASE.jar spring-jcl-5.0.10.RELEASE.ja
- r commons-codec-1.11.jar poi-ooxml-3.16.jar spring-data-jpa-2.0.11.RE
- LEASE.jar snakeyaml-1.19.jar curvesapi-1.04.jar spring-boot-2.0.6.REL
- EASE.jar spring-tx-5.0.10.RELEASE.jar mchange-commons-java-0.2.11.jar
-  gson-2.8.5.jar spring-core-5.0.10.RELEASE.jar spring-boot-starter-to
- mcat-2.0.6.RELEASE.jar spring-context-5.0.10.RELEASE.jar hibernate-co
- re-5.2.17.Final.jar spring-boot-starter-json-2.0.6.RELEASE.jar httpco
- re-4.4.10.jar ezmorph-1.0.6.jar c3p0-0.9.5.2.jar tomcat-embed-el-8.5.
- 34.jar jackson-datatype-jdk8-2.9.7.jar spring-boot-starter-2.0.6.RELE
- ASE.jar activation-1.1.1.jar spring-expression-5.0.10.RELEASE.jar log
- back-core-1.2.3.jar hibernate-commons-annotations-5.0.1.Final.jar spr
- ing-boot-starter-aop-2.0.6.RELEASE.jar dom4j-1.6.1.jar ss-commons-0.2
- .4.jar ss-kvcache-0.2.jar ons-client-1.2.5.jar jackson-module-paramet
- er-names-2.9.7.jar spring-aspects-5.0.10.RELEASE.jar xmlbeans-2.6.0.j
- ar okio-1.13.0.jar okhttp-3.9.1.jar slf4j-api-1.7.25.jar commons-pool
- 2-2.5.0.jar javax.transaction-api-1.2.jar javax.annotation-api-1.3.2.
- jar spring-boot-starter-web-2.0.6.RELEASE.jar spring-boot-devtools-2.
- 0.6.RELEASE.jar poi-3.16.jar aliyun-sdk-oss-2.2.3.jar aspectjweaver-1
- .8.13.jar poi-ooxml-schemas-3.16.jar hibernate-entitymanager-5.2.17.F
- inal.jar jandex-2.0.3.Final.jar mail-1.4.7.jar log4j-api-2.10.0.jar j
- boss-transaction-api_1.2_spec-1.0.1.Final.jar logback-classic-1.2.3.j
- ar spring-boot-autoconfigure-2.0.6.RELEASE.jar spring-web-5.0.10.RELE
- ASE.jar tomcat-embed-websocket-8.5.34.jar javax.activation-api-1.2.0.
- jar stax-api-1.0.1.jar HikariCP-2.7.9.jar log4j-to-slf4j-2.10.0.jar s
- pring-beans-5.0.10.RELEASE.jar commons-beanutils-1.8.0.jar jaxb-impl-
- 2.1.jar jaxb-api-2.3.1.jar spring-jdbc-5.0.10.RELEASE.jar aliyun-java
- -sdk-core-4.0.8.jar hibernate-validator-6.0.13.Final.jar jackson-data
- type-jsr310-2.9.7.jar jdom-1.1.jar byte-buddy-1.7.11.jar jackson-core
- -2.9.7.jar json-lib-2.4-jdk15.jar spring-boot-starter-jdbc-2.0.6.RELE
- ASE.jar validation-api-2.0.1.Final.jar commons-collections4-4.1.jar a
- ntlr-2.7.7.jar jackson-annotations-2.9.0.jar jackson-databind-2.9.7.j
- ar spring-webmvc-5.0.10.RELEASE.jar jaxb-core-2.1.14.jar jul-to-slf4j
- -1.7.25.jar aliyun-java-sdk-sts-2.1.6.jar commons-lang-2.5.jar mysql-
- connector-java-5.1.47.jar jboss-logging-3.3.2.Final.jar fastjson-1.2.
- 28.jar hibernate-jpa-2.1-api-1.0.0.Final.jar commons-logging-1.1.1.ja
- r commons-lang3-3.7.jar javassist-3.22.0-GA.jar spring-orm-5.0.10.REL
- EASE.jar jedis-2.9.0.jar classmate-1.3.4.jar spring-boot-starter-logg
- ing-2.0.6.RELEASE.jar httpclient-4.5.6.jar tomcat-embed-core-8.5.34.j
- ar spring-boot-starter-data-jpa-2.0.0.RELEASE.jar
+Class-Path: tomcat-embed-core-8.5.34.jar spring-expression-5.0.10.RELE
+ ASE.jar ons-client-1.2.5.jar fastjson-1.2.28.jar jaxb-impl-2.1.jar do
+ m4j-1.6.1.jar commons-lang-2.5.jar httpclient-4.5.6.jar spring-tx-5.0
+ .10.RELEASE.jar validation-api-2.0.1.Final.jar log4j-to-slf4j-2.10.0.
+ jar spring-boot-starter-tomcat-2.0.6.RELEASE.jar gson-2.8.5.jar activ
+ ation-1.1.1.jar okio-1.13.0.jar spring-boot-starter-json-2.0.6.RELEAS
+ E.jar spring-boot-2.0.6.RELEASE.jar ezmorph-1.0.6.jar spring-orm-5.0.
+ 10.RELEASE.jar commons-pool2-2.5.0.jar javax.activation-api-1.2.0.jar
+  spring-boot-starter-2.0.6.RELEASE.jar jaxb-core-2.1.14.jar spring-bo
+ ot-starter-aop-2.0.6.RELEASE.jar aliyun-sdk-oss-2.2.3.jar spring-aop-
+ 5.0.10.RELEASE.jar hibernate-entitymanager-5.2.17.Final.jar jdom-1.1.
+ jar classmate-1.3.4.jar spring-beans-5.0.10.RELEASE.jar aliyun-java-s
+ dk-core-4.0.8.jar spring-aspects-5.0.10.RELEASE.jar jackson-core-2.9.
+ 7.jar httpcore-4.4.10.jar mail-1.4.7.jar javax.annotation-api-1.3.2.j
+ ar spring-data-jpa-2.0.11.RELEASE.jar spring-jcl-5.0.10.RELEASE.jar j
+ avassist-3.22.0-GA.jar jackson-module-parameter-names-2.9.7.jar tomca
+ t-embed-el-8.5.34.jar ss-commons-0.2.4.jar commons-collections-3.2.1.
+ jar slf4j-api-1.7.25.jar tomcat-embed-websocket-8.5.34.jar spring-jdb
+ c-5.0.10.RELEASE.jar c3p0-0.9.5.2.jar hibernate-jpa-2.1-api-1.0.0.Fin
+ al.jar xmlbeans-2.6.0.jar commons-logging-1.1.1.jar ss-kvcache-0.2.ja
+ r jaxb-api-2.3.1.jar javax.transaction-api-1.2.jar jackson-databind-2
+ .9.7.jar aspectjweaver-1.8.13.jar mchange-commons-java-0.2.11.jar jac
+ kson-datatype-jdk8-2.9.7.jar poi-3.16.jar snakeyaml-1.19.jar jboss-lo
+ gging-3.3.2.Final.jar spring-boot-starter-web-2.0.6.RELEASE.jar sprin
+ g-context-5.0.10.RELEASE.jar HikariCP-2.7.9.jar spring-boot-starter-j
+ dbc-2.0.6.RELEASE.jar hibernate-core-5.2.17.Final.jar log4j-api-2.10.
+ 0.jar spring-webmvc-5.0.10.RELEASE.jar hibernate-commons-annotations-
+ 5.0.1.Final.jar aliyun-java-sdk-sts-2.1.6.jar curvesapi-1.04.jar comm
+ ons-beanutils-1.8.0.jar okhttp-3.9.1.jar jedis-2.9.0.jar spring-boot-
+ starter-logging-2.0.6.RELEASE.jar jackson-datatype-jsr310-2.9.7.jar s
+ tax-api-1.0.1.jar spring-boot-starter-data-jpa-2.0.0.RELEASE.jar spri
+ ng-web-5.0.10.RELEASE.jar hibernate-validator-6.0.13.Final.jar antlr-
+ 2.7.7.jar jandex-2.0.3.Final.jar spring-core-5.0.10.RELEASE.jar sprin
+ g-data-commons-2.0.11.RELEASE.jar jackson-annotations-2.9.0.jar poi-o
+ oxml-schemas-3.16.jar commons-collections4-4.1.jar logback-core-1.2.3
+ .jar jboss-transaction-api_1.2_spec-1.0.1.Final.jar jul-to-slf4j-1.7.
+ 25.jar json-lib-2.4-jdk15.jar spring-boot-devtools-2.0.6.RELEASE.jar 
+ logback-classic-1.2.3.jar mysql-connector-java-5.1.47.jar commons-cod
+ ec-1.11.jar poi-ooxml-3.16.jar byte-buddy-1.7.11.jar commons-lang3-3.
+ 7.jar spring-boot-autoconfigure-2.0.6.RELEASE.jar
 Main-Class: com.mdtech.zyedu.App
 

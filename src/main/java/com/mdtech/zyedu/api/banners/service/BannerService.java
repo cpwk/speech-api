@@ -3,7 +3,6 @@ package com.mdtech.zyedu.api.banners.service;
 import com.mdtech.zyedu.api.banners.model.Banner;
 import com.mdtech.zyedu.api.banners.qo.BannerQo;
 import com.mdtech.zyedu.common.exception.ServiceException;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 

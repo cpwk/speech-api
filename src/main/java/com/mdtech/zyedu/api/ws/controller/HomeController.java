@@ -1,7 +1,6 @@
 package com.mdtech.zyedu.api.ws.controller;
 
 import com.mdtech.zyedu.api.article.qo.ArticleQo;
-import com.mdtech.zyedu.api.article.service.ArticleService;
 import com.mdtech.zyedu.api.article.service.IArticleService;
 import com.mdtech.zyedu.api.banners.qo.BannerQo;
 import com.mdtech.zyedu.api.banners.service.BannerService;

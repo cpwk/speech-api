@@ -19,8 +19,7 @@ public enum AdminPermission {
     CAMPUS_EDIT("校区管理", Constants.LEVEL_PRIMARY),
     ARTICLE_EDIT("文章管理", Constants.LEVEL_PRIMARY),
     FORM_QUERY("表单查询", Constants.LEVEL_PRIMARY),
-    VIDEO_EDIT("视频查询", Constants.LEVEL_PRIMARY)
-    ;
+    VIDEO_EDIT("视频查询", Constants.LEVEL_PRIMARY);
 
 
     private String val;

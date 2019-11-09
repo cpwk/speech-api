@@ -1,7 +1,6 @@
 package com.mdtech.zyedu.api.video.qo;
 
 import com.mdtech.zyedu.common.reposiotry.support.DataQueryObjectPage;
-import com.mdtech.zyedu.common.reposiotry.support.DataQueryObjectSort;
 import com.mdtech.zyedu.common.reposiotry.support.QueryField;
 import com.mdtech.zyedu.common.reposiotry.support.QueryType;
 

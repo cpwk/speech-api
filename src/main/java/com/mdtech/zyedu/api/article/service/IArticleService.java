@@ -23,6 +23,6 @@ public interface IArticleService {
 
     void updateStatus(Byte status, Integer id);
 
-    Map<String,Article> three_article(Integer id);
+    Map<String, Article> three_article(Integer id);
 
 }
