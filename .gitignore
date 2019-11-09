@@ -31,4 +31,5 @@ zyedu-api.iml
 /out
 
 ### VS Code ###
-.vscode/
+.vscode
+/classes
