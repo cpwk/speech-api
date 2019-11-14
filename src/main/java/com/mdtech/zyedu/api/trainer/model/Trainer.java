@@ -13,8 +13,11 @@ public class Trainer {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "img")
-    private String img;
+    @Column(name = "pc_img")
+    private String pcImg;
+
+    @Column(name = "mob_img")
+    private String mobImg;
 
     @Column(name = "intro")
     private String intro;
@@ -53,12 +56,20 @@ public class Trainer {
         this.name = name;
     }
 
-    public String getImg() {
-        return img;
+    public String getPcImg() {
+        return pcImg;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setPcImg(String pcImg) {
+        this.pcImg = pcImg;
+    }
+
+    public String getMobImg() {
+        return mobImg;
+    }
+
+    public void setMobImg(String mobImg) {
+        this.mobImg = mobImg;
     }
 
     public String getIntro() {

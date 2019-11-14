@@ -9,8 +9,8 @@
 
     <packaging>jar</packaging>
 
-    <name>zyedu-api</name>
-    <description>中阳教育</description>
+    <name>speecher-api</name>
+    <description>超级演说家</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
