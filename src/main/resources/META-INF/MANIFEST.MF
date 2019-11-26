@@ -39,5 +39,5 @@ Class-Path: tomcat-embed-core-8.5.34.jar spring-expression-5.0.10.RELE
  logback-classic-1.2.3.jar mysql-connector-java-5.1.47.jar commons-cod
  ec-1.11.jar poi-ooxml-3.16.jar byte-buddy-1.7.11.jar commons-lang3-3.
  7.jar spring-boot-autoconfigure-2.0.6.RELEASE.jar
-Main-Class: com.mdtech.zyedu.App
+Main-Class: com.mdtech.speecher.App
 
