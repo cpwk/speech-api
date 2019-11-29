@@ -45,7 +45,7 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public void saveVideo(Video video) throws ServiceException {
 
-        if (StringUtils.isEmpty(video.getTitle())) {
+        if (video.getType() != 1 && StringUtils.isEmpty(video.getTitle())) {
             throw new DetailedException("请填写视频标题");
         }
         if (StringUtils.isEmpty(video.getImg())) {
