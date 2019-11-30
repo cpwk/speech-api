@@ -3,12 +3,14 @@ package com.mdtech.speecher.api.video.service;
 import com.mdtech.speecher.api.video.model.Video;
 import com.mdtech.speecher.api.video.qo.VideoQo;
 import com.mdtech.speecher.api.video.repository.VideoRepository;
+import com.mdtech.speecher.common.entity.Constants;
 import com.mdtech.speecher.common.exception.DetailedException;
 import com.mdtech.speecher.common.exception.ServiceException;
 import com.mdtech.speecher.common.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * * * * * * * * * * * * * * * * * * * * * * * *
@@ -80,6 +82,15 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public void updateStatus(Byte status, Integer id) {
+        Video video = videoRepository.getOne(id);
+        video.setStatus(status);
+        videoRepository.save(video);
+    }
+
+    @Override
+    @Transactional
+    public void updateStatusOne(Byte status, Integer id) {
+        videoRepository.updateAllStatusByType(Constants.VIDEO_TYPE);
         Video video = videoRepository.getOne(id);
         video.setStatus(status);
         videoRepository.save(video);

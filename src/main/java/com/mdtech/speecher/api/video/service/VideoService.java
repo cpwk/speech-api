@@ -23,4 +23,6 @@ public interface VideoService {
     void saveVideo(Video video) throws ServiceException;
 
     void updateStatus(Byte status, Integer id);
+
+    void updateStatusOne(Byte status, Integer id);
 }

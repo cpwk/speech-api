@@ -57,4 +57,11 @@ public class VideoController extends BaseController {
         videoService.updateStatus(status, id);
         return feedback(null);
     }
+
+    @RequestMapping(value = "/updateStatusOne")
+    @RequiredPermission(adminType = AdminType.ADMIN, adminPermission = AdminPermission.CAMPUS_EDIT)
+    public ModelAndView updateStatusOne(Byte status, Integer id) throws Exception {
+        videoService.updateStatusOne(status, id);
+        return feedback(null);
+    }
 }
